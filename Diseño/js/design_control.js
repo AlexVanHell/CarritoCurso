@@ -1,12 +1,5 @@
 $(document).ready( function() {
 
-	$('html, body').click( function() {
-		showMenu( false );
-	});
-
-	$('#menu, #menu_button').click( function( event ) {
-		event.stopPropagation();
-	});
 
 });
 
@@ -15,11 +8,25 @@ function showMenu( status ) {
 	if ( status ) {
 		selector.animate({
 			'left': '0',
-		}, 800);
+		});
 	} else {
 		selector.animate({
-			'left': '-100%',
-		}, 800);
+			'left': -selector.width(),
+		});
+	}
+}
+
+function showCart( status ) {
+	var selector = $('#cart-mini-list');
+	console.log(selector.width());
+	if ( status ) {
+		selector.animate({
+			'right': '0',
+		});
+	} else {
+		selector.animate({
+			'right': -selector.width(),
+		});
 	}
 }
 

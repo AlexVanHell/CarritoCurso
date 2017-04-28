@@ -1,5 +1,7 @@
 @media screen and (min-width: 1024px) {
 
+	.responsive_padding{padding: 64px 48px 64px 48px;}
+
 	.responsive_col .col_3 {
 		width: 33.3333333%;
 	}
@@ -38,6 +40,22 @@
 
 	.toolbar .toolbar_in .right_info .search_bar_container .search_bar .text_field button {
 		width: 52px;
+	}
+
+	.product_h_list .product .pr_img {
+		width: 360px;
+	}
+
+	.product_h_list .product .product_info {
+		width: calc(100% - 360px);
+	}
+
+	.product_h_list .product .product_info .pd_24 {
+		padding: 32px;
+	}
+
+	.cart_container {
+		height: calc(100% - 64px);
 	}
 
 }

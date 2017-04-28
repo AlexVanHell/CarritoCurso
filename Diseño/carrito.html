@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Shop it - Inicio</title>
+		<title>Shop it - Mi carrito</title>
 		<meta charset='utf-8'>
 		<meta name='viewport', content='width=device-width, maximum-scale=1.0 user-scalable=no'>
 		<link rel='stylesheet' type="text/css" href='css/style.css' />
@@ -36,7 +36,7 @@
 							</div>
 						</div>
 					</div><span class="v_align_top font_big pd_right_16 info_icons">
-						<span class="mr_right_4 hover_black" onclick="showCart( true );">
+						<span class="mr_right_4 hover_black">
 							<div class="pd_right_4 pd_left_4">
 								<img src="icons/cart_white.png" class="icon mr_right_8 v_align_middle" />
 								<b id="cart-items" class="v_align_middle">1</b>
@@ -44,7 +44,7 @@
 						</span>
 						<span class="mr_left_4">
 							<b class="title_smaller v_align_middle mr_right_4" id="cart-price">$</b>
-							<b id="cart-price" class="v_align_middle">424.86</b>
+							<b id="cart-price" class="v_align_middle">0</b>
 						</span>
 					</span>
 				</div>
@@ -115,135 +115,16 @@
 				</div>
 			</section>
 		</article>
-		<article id="cart-mini-list" class="cart_container bg_lightgray shadow_flat">
-			<div class="inner pd_8">
-				<a href="carrito.html" class="underline font_gray">
-					<h2 class="title_medium font_gray pd_8 cart_title text_align_right">
-						Mi carrito (1)
-					</h2>
-				</a>
-				<button class="close hover_black" onclick="showCart( false );">
-					<img class="icon opacity" src="icons/close_black.png" />
-				</button>
-				<div class="history_total_amount text_align_right mr_top_8">
-					<div class="pd_right_16 pd_left_16">
-						<span class="mr_right_8">
-							<h3 class="title_smaller mr_bottom_12 opacity">
-								Por pagar
-							</h3>
-						</span><span>
-							<h2 class="title_small font_primary">$849.73</h2>
-						</span>
-					</div>
-				</div>
-				<div class="products_list">
-					<div class="pd_8 product">
-						<div class="bg_white shadow_flat">
-							<div class="pr_img">
-								<div class="img_container">
-									<img src="https://s-media-cache-ak0.pinimg.com/originals/cf/a2/58/cfa258fc88436cb491a0a9ebe00334e6.jpg" />
-								</div>
-							</div>
-							<div class="product_info">
-								<div class="pd_16">
-									<div class="info mr_bottom_24">
-										<h2 class="title_smaller">
-											Nombre Producto
-										</h2>
-										<div class="mr_top_16">
-											<h3 class="mr_bottom_4 font_gray">
-												Descripcion:
-											</h3>
-											<p>
-												Lorem ipsum dolor si amet consequetur
-											</p>
-										</div>
-									</div>
-									<div class="add_cart_container text_align_center mr_bottom_16">
-										<h5 class="font_gray mr_bottom_8">
-											Elementos agregados
-										</h5>
-										<button class="circle hover_black" title="Quitar">
-											<img class="icon opacity" src="icons/minus_black.png">
-										</button>
-										<span class="pd_8 font_big v_align_middle">
-											1
-										</span>
-										<button class="circle hover_black" title="Agregar">
-											<img class="icon opacity" src="icons/plus_black.png">
-										</button>
-									</div>
-									<div class="price_container text_align_right">
-										<div class="prices">
-											<div class="discount">
-												<div class="opacity mr_bottom_4">
-													Descuento 15%
-												</div>
-												<h2 class="opacity font_big font_normal">
-													<strike>
-														$499.84
-													</strike>
-												</h2>
-											</div>
-											<h2 class="title_smaller mr_top_16 total">
-												$424.86
-											</h2>
-										</div>
-									</div>
-									<div class="delete_container text_align_right pd_top_16">
-										<button class="font_red font_big">
-											Eliminar del carrito
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</article>
-		<article class="main_container bg_black">
-			<section class="sub_container">
-				<div class="main_block">
-					<div class="img_container">
-						<img src="https://www.xhostel.com/wp-content/uploads/2017/03/best-shopping-in-Bucharest.jpg" style="height: 100%;width: auto;">
-					</div>
-					<div class="info_container">
-						<div class="center_info font_white">
-							<h1 class="title_big">
-								Ahorra por tiempo limitado
-							</h1>
-							<h3 class="font_big mr_top_24">
-								Aprovecha los descuentos de hasta el 30% en varios de nuestros productos
-							</h3>
-							<div class="text_align_left">
-								<a href="index.html">
-									<button class="pd_16 border_white font_white shadow_raised mr_top_32 border_radius">
-										<h4 class="font_big font_light">Ver productos</h4>
-									</button>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="carousel_indicator">
-					<div class="inner">
-						<span class="point circle" id="main-point-indicator"></span>
-						<span class="point circle"></span>
-						<span class="point circle"></span>
-						<span class="point circle"></span>
-						<span class="point circle"></span>
-					</div>
-				</div>
-			</section>
-		</article>
 		<article>
 			<div class="responsive_padding">
 				<h1 class="title_bigger mr_bottom_48 font_primary font_normal">
-					Titulo
+					Mi carrito
+					<span class="float_right">
+						<h3 class="title_small pd_top_16 font_black pd_8">3 Elementos</h3>
+					</span>
 				</h1>
 				<section class="responsive_col text_align_center">
-					<div class="col_3 text_align_left">
+					<div class="col_2 text_align_left">
 						<div class="pd_8 product">
 							<div class="bg_white shadow_flat">
 								<div class="pr_img">
@@ -268,13 +149,13 @@
 										</div>
 										<div class="add_cart_container text_align_center mr_bottom_16">
 											<h4 class="font_gray mr_bottom_8">
-												Añadir al carrito
+												Elementos agregados
 											</h4>
 											<button class="circle hover_black" title="Quitar">
 												<img class="icon opacity" src="icons/minus_black.png">
 											</button>
 											<span class="pd_8 title_smaller v_align_middle">
-												0
+												1
 											</span>
 											<button class="circle hover_black" title="Agregar">
 												<img class="icon opacity" src="icons/plus_black.png">
@@ -296,6 +177,11 @@
 													$424.86
 												</h2>
 											</div>
+										</div>
+										<div class="delete_container text_align_right pd_top_24">
+											<button class="font_red font_big">
+												Eliminar del carrito
+											</button>
 										</div>
 									</div>
 								</div>
