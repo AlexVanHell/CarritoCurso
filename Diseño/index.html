@@ -1,21 +1,194 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Index</title>
+		<title>Shop it - Inicio</title>
 		<meta charset='utf-8'>
 		<meta name='viewport', content='width=device-width, maximum-scale=1.0 user-scalable=no'>
-		<link rel='stylesheet' type="text/css" href='css/style.css'>
-		<link rel='stylesheet' type="text/css" href='css/style.css'>
-		<link rel='stylesheet' type="text/css" href='css/style_resp_425.css'>
-		<link rel='stylesheet' type="text/css" href='css/style_resp_768.css'>
-		<link rel='stylesheet' type="text/css" href='css/style_resp_1024.css'>
-		<link rel='stylesheet' type="text/css" href='css/style_resp_1440.css'>
+		<link rel='stylesheet' type="text/css" href='css/style.css' />
+		<link rel='stylesheet' type="text/css" href='css/style_resp_425.css' />
+		<link rel='stylesheet' type="text/css" href='css/style_resp_768.css' />
+		<link rel='stylesheet' type="text/css" href='css/style_resp_1024.css' />
+		<link rel='stylesheet' type="text/css" href='css/style_resp_1440.css' />
+		<link rel="shortcut icon" type="image/png" href="icons/logo.png" />
 		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="js/design_control.js"></script>
 	</head>
 	<body>
-		<section class="toolbar">
-			
+		<section class="toolbar bg_primary shadow_flat">
+			<button class="menu_button" id="menu_button" onclick="showMenu( true );">
+				<img src="icons/menu.png" class="icon v_align_middle" />
+			</button>
+			<div class="toolbar_in">
+				<div class="logo_container font_white v_align_top">
+					<img src="icons/logo_white.png" class="icon v_align_middle" /><h1 class="title_smaller v_align_middle">Shop It</h1>
+				</div><div class="right_info font_white">
+					<div class="search_bar_container v_align_top">
+						<img id="search-icon" src="icons/magnify_white.png" class="icon v_align_middle" onclick="showSearchBar( true );" />
+						<div class="search_bar" id="search-bar">
+							<div class="text_field bg_white border_radius shadow_flat">
+								<input type="text" name="" placeholder="Buscar un producto">
+								<button type="submit">
+									<img src="icons/magnify_black.png" class="icon opacity" />
+								</button>
+								<button class="close hover_black" onclick="showSearchBar( false );">
+									<img src="icons/close_black.png" class="icon opacity" />
+								</button>
+							</div>
+						</div>
+					</div><span class="v_align_top font_big pd_right_16">
+						<span class="mr_right_4">
+							<img src="icons/cart_white.png" class="icon mr_right_8 v_align_middle" />
+							<b id="cart-items" class="v_align_middle">0</b>
+						</span>
+						<span class="mr_left_4">
+							<b class="title_smaller v_align_middle mr_right_4" id="cart-price">$</b>
+							<b id="cart-price" class="v_align_middle">0</b>
+						</span>
+					</span>
+				</div>
+			</div>
 		</section>
+		<div class="toolbar_back"></div>
+		<article class="menu shadow_flat bg_white" id="menu">
+			<div class="close text_align_right">
+				<button class="text_align_center hover_black" onclick="showMenu( false );">
+					<img src="icons/close_black.png" class="icon opacity v_align_middle" />
+				</button>
+			</div>
+			<section class="profile_container">
+				<div class="pd_24 text_align_center">
+					<div class="img_container circle margin_auto">
+						<img src="icons/default_profile.png" />
+					</div>
+					<div class="name mr_top_24">
+						<a href="" class="font_gray">
+							<h3 class="title_smaller">
+								Austin Andrews
+							</h3>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="list">
+				<nav class="menu_options">
+					<a href="">
+						<li class="pd_16 hover_black">
+							<img src="icons/home_black.png" class="icon opacity">
+							<strong>
+								Inicio
+							</strong>
+						</li>
+					</a>
+					<a href="">
+						<li class="pd_16 hover_black">
+							<img src="icons/shopping_black.png" class="icon opacity">
+							<strong>
+								Historial de compras
+							</strong>
+						</li>
+					</a>
+					<a href="">
+						<li class="pd_16 hover_black">
+							<img src="icons/cart_black.png" class="icon opacity">
+							<strong>
+								Carrito
+							</strong>
+						</li>
+					</a>
+					<a href="">
+						<li class="pd_16 hover_black">
+							<img src="icons/account_black.png" class="icon opacity">
+							<strong>
+								Perfil
+							</strong>
+						</li>
+					</a>
+				</nav>
+			</section>
+			<section class="bottom_actions">
+				<div class="text_align_right">
+					<button class="font_red pd_16 font_big">
+						Cerrar sesión
+					</button>
+				</div>
+			</section>
+		</article>
+		<article class="main_container bg_black">
+			<section class="sub_container">
+				<div class="main_block">
+					<div class="img_container">
+						<img src="https://www.xhostel.com/wp-content/uploads/2017/03/best-shopping-in-Bucharest.jpg" style="height: 100%;width: auto;">
+					</div>
+					<div class="info_container">
+						<div class="center_info font_white">
+							<h1 class="title_big text_shadow">
+								Compra ahora y ahorra
+							</h1>
+							<h3 class="font_big mr_top_24">
+								Aprovecha los descuentos de hasta el 30% en varios de nuestros productos
+							</h3>
+							<div class="text_align_left">
+								<a href="index.html">
+									<button class="pd_16 border_white font_white shadow_raised mr_top_32 border_radius">
+										<h4 class="font_big font_light">Ver productos</h4>
+									</button>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="carousel_indicator">
+					<div class="inner">
+						<span class="point circle" id="main-point-indicator"></span>
+						<span class="point circle"></span>
+						<span class="point circle"></span>
+						<span class="point circle"></span>
+						<span class="point circle"></span>
+					</div>
+				</div>
+			</section>
+		</article>
+		<article>
+			<div class="pd_48">
+				<h1 class="title_bigger mr_bottom_48 text_align_center">Checa nuestros productos</h1>
+				<section class="responsive_col text_align_center">
+					<div class="col_3 text_align_left">
+						<div class="pd_8">
+							<div class="bg_white product shadow_flat pd_24">
+								<div class="pr_img">
+									<div class="img_container">
+										<img src="https://s-media-cache-ak0.pinimg.com/originals/cf/a2/58/cfa258fc88436cb491a0a9ebe00334e6.jpg" />
+									</div>
+								</div>
+								<div class="info mr_bottom_24 mr_top_16">
+									<h2 class="title_medium">
+										Nombre Producto
+									</h2>
+									<div class="mr_top_16">
+										<h3 class="font_big mr_bottom_8">Descripcion:</h3>
+										<p class="font_big">
+											Lorem ipsum dolor si amet consequetur
+										</p>
+									</div>
+								</div>
+								<div class="add_cart_container text_align_center mr_bottom_24">
+									<h4 class="font_gray mr_bottom_8">Añadir al carrito</h4>
+									<button class="circle hover_black">
+										<img class="icon opacity" src="icons/minus_black.png">
+									</button>
+									<span class="pd_8 title_smaller v_align_middle">1</span>
+									<button class="circle hover_black">
+										<img class="icon opacity" src="icons/plus_black.png">
+									</button>
+								</div>
+								<div class="price_container text_align_right">
+									<h2 class="title_small">$499.84</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</article>
 	</body>
 </html>
