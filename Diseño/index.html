@@ -101,7 +101,7 @@
 						<li class="pd_16 hover_black">
 							<img src="icons/account_black.png" class="icon opacity">
 							<strong>
-								Perfil
+								Cuenta
 							</strong>
 						</li>
 					</a>
@@ -140,9 +140,11 @@
 					<div class="pd_8 product">
 						<div class="bg_white shadow_flat">
 							<div class="pr_img">
-								<div class="img_container">
-									<img src="https://s-media-cache-ak0.pinimg.com/originals/cf/a2/58/cfa258fc88436cb491a0a9ebe00334e6.jpg" />
-								</div>
+								<a href="producto.html">
+									<div class="img_container">
+										<img src="https://s-media-cache-ak0.pinimg.com/originals/cf/a2/58/cfa258fc88436cb491a0a9ebe00334e6.jpg" />
+									</div>
+								</a>
 							</div>
 							<div class="product_info">
 								<div class="pd_16">
@@ -151,10 +153,10 @@
 											Nombre Producto
 										</h2>
 										<div class="mr_top_16">
-											<h3 class="mr_bottom_4 font_gray">
+											<h3 class="font_gray">
 												Descripcion:
 											</h3>
-											<p>
+											<p class="pd_8">
 												Lorem ipsum dolor si amet consequetur
 											</p>
 										</div>
@@ -195,6 +197,9 @@
 											Eliminar del carrito
 										</button>
 									</div>
+									<p class="text_align_left mr_top_8">
+										<a href="producto.html" target="_blank" class="font_gray font_bold">Ver mas</a>
+									</p>
 								</div>
 							</div>
 						</div>
@@ -203,10 +208,19 @@
 			</div>
 		</article>
 		<article class="main_container bg_black">
-			<section class="sub_container">
-				<div class="main_block">
+			<div class="carousel_indicator">
+				<div class="inner" id="main-carousel-indicator">
+					<i class="point circle indicator"></i>
+					<span class="point circle"></span>
+					<span class="point circle"></span>
+					<span class="point circle"></span>
+					<span class="point circle"></span>
+				</div>
+			</div>
+			<section class="sub_container" id="main-carousel">
+				<div class="main_block carousel_element">
 					<div class="img_container">
-						<img src="https://www.xhostel.com/wp-content/uploads/2017/03/best-shopping-in-Bucharest.jpg" style="height: 100%;width: auto;">
+						<img src="https://www.xhostel.com/wp-content/uploads/2017/03/best-shopping-in-Bucharest.jpg" adjustable />
 					</div>
 					<div class="info_container">
 						<div class="center_info font_white">
@@ -216,23 +230,77 @@
 							<h3 class="font_big mr_top_24">
 								Aprovecha los descuentos de hasta el 30% en varios de nuestros productos
 							</h3>
-							<div class="text_align_left">
+							<div>
 								<a href="index.html">
-									<button class="pd_16 border_white font_white shadow_raised mr_top_32 border_radius">
+									<button class="pd_16 border_white font_white mr_top_32 border_radius">
 										<h4 class="font_big font_light">Ver productos</h4>
 									</button>
 								</a>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="carousel_indicator">
-					<div class="inner">
-						<span class="point circle" id="main-point-indicator"></span>
-						<span class="point circle"></span>
-						<span class="point circle"></span>
-						<span class="point circle"></span>
-						<span class="point circle"></span>
+				</div><div class="main_block carousel_element">
+					<div class="img_container">
+						<img src="http://usedclothescollection.uk/wp-content/uploads/2015/04/second-slide.jpg" adjustable />
+					</div>
+					<div class="info_container text_align_right">
+						<div class="center_info font_white">
+							<h1 class="title_big">
+								Nuevos productos para toda la familia
+							</h1>
+							<h3 class="font_big mr_top_24">
+								Ropa, calzado, articulos para el hogar
+							</h3>
+							<div>
+								<a href="index.html">
+									<button class="pd_16 border_white font_white mr_top_32 border_radius">
+										<h4 class="font_big font_light">Ver productos</h4>
+									</button>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div><div class="main_block carousel_element">
+					<div class="img_container">
+						<img src="http://s2.dmcdn.net/hPesb.jpg" adjustable />
+					</div>
+					<div class="info_container">
+						<div class="center_info font_white">
+							<h1 class="title_big">
+								¡Nintendo Switch esta aqui!
+							</h1>
+							<h3 class="font_big mr_top_24">
+								¿Qué esperas para tener el tuyo?
+							</h3>
+							<div>
+								<a href="producto.html">
+									<button class="pd_16 border_white font_white mr_top_32 border_radius">
+										<h4 class="font_big font_light">Comprar ahora</h4>
+									</button>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div><div class="main_block carousel_element">
+					<div class="img_container">
+						<img src="http://www.skullcandy.com/on/demandware.static/-/Library-Sites-SKDYCONTENT_TMPLT/default/dwb56dbc1c/product_assets/CRUSHER/Crusher-BassAdjustments-detail-view-1152x657.jpg" adjustable />
+					</div>
+					<div class="info_container text_align_right">
+						<div class="center_info font_white">
+							<h1 class="title_big">
+								Skullcandy Crusher
+							</h1>
+							<h3 class="font_big mr_top_24">
+								Siente el poder de los bajos en tus oidos
+							</h3>
+							<div>
+								<a href="index.html">
+									<button class="pd_16 border_white font_white mr_top_32 border_radius">
+										<h4 class="font_big font_light">Comprar ahora</h4>
+									</button>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -240,16 +308,18 @@
 		<article>
 			<div class="responsive_padding">
 				<h1 class="title_bigger mr_bottom_48 font_primary font_normal">
-					Titulo
+					Algunos productos que te pueden interesar
 				</h1>
 				<section class="responsive_col text_align_center">
 					<div class="col_3 text_align_left">
 						<div class="pd_8 product">
 							<div class="bg_white shadow_flat">
 								<div class="pr_img">
-									<div class="img_container">
-										<img src="https://s-media-cache-ak0.pinimg.com/originals/cf/a2/58/cfa258fc88436cb491a0a9ebe00334e6.jpg" />
-									</div>
+									<a href="producto.html">
+										<div class="img_container">
+											<img src="https://s-media-cache-ak0.pinimg.com/originals/cf/a2/58/cfa258fc88436cb491a0a9ebe00334e6.jpg" />
+										</div>
+									</a>
 								</div>
 								<div class="product_info">
 									<div class="pd_24">
@@ -258,10 +328,10 @@
 												Nombre Producto
 											</h2>
 											<div class="mr_top_16">
-												<h3 class="font_big mr_bottom_4 font_gray">
+												<h3 class="font_big font_gray">
 													Descripcion:
 												</h3>
-												<p class="font_big">
+												<p class="font_big pd_8">
 													Lorem ipsum dolor si amet consequetur
 												</p>
 											</div>
@@ -297,6 +367,9 @@
 												</h2>
 											</div>
 										</div>
+										<p class="text_align_left mr_top_8">
+											<a href="producto.html" target="_blank" class="font_gray font_bold">Ver mas</a>
+										</p>
 									</div>
 								</div>
 							</div>
