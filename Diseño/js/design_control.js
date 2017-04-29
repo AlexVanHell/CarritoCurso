@@ -13,23 +13,25 @@ $(document).ready( function() {
 	}, 500);
 
 
-	// Carousel de imagenes
-	$('#main-carousel-indicator').find('span').remove();
+	if ( $('#main-carousel').length > 0 ) {
+		// Carousel de imagenes
+		$('#main-carousel-indicator').find('span').remove();
 
-	$('#main-carousel').find('.carousel_element').each( function( index ) {
-		$(this).attr('data-idposition', index);
-		// Agregando los puntos indicadores dinamicamente
-		$('#main-carousel-indicator').append('<span class="point circle"></span>');
-	});
+		$('#main-carousel').find('.carousel_element').each( function( index ) {
+			$(this).attr('data-idposition', index);
+			// Agregando los puntos indicadores dinamicamente
+			$('#main-carousel-indicator').append('<span class="point circle"></span>');
+		});
 
-	var initMainCarousel = setInterval( function() {
-		moveCarousel( true, '#main-carousel', '#main-carousel-indicator' );
-	}, 5000);
+		var initMainCarousel = setInterval( function() {
+			moveCarousel( true, '#main-carousel', '#main-carousel-indicator' );
+		}, 5000);
 
-	$('#main-carousel-indicator').find('span').click( function () {
-		clearInterval( initMainCarousel );
-		moveCarousel( false, '#main-carousel', '#main-carousel-indicator', $('#main-carousel-indicator span').index( $(this) ) );
-	});
+		$('#main-carousel-indicator').find('span').click( function () {
+			clearInterval( initMainCarousel );
+			moveCarousel( false, '#main-carousel', '#main-carousel-indicator', $('#main-carousel-indicator span').index( $(this) ) );
+		});
+	}
 
 });
 
