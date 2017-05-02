@@ -1,4 +1,11 @@
 $(document).ready( function() {
+	$('html, body').click( function() {
+		showMenu( false );
+	}); 
+
+	$('#menu_button, #menu').click( function( event ) {
+		event.stopPropagation();
+	});
 
 	$('#add-phone-button, #change-profile-photo').click( function( event ) {
 		event.preventDefault();
