@@ -713,6 +713,7 @@ a { text-decoration: none; }
 .field input:focus, .field select:focus {
 	border-color: #8BC34A;
 	border-width: 2px;
+	padding-bottom: 5px;
 }
 
 .field input[type="submit"], .field input[type="button"] {
@@ -725,6 +726,19 @@ a { text-decoration: none; }
 	padding-right: 16px;
 	font-size: 18px;
 	cursor: pointer;
+}
+
+.field *::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #bdbdbd;
+}
+.field *::-moz-placeholder { /* Firefox 19+ */
+  color: #bdbdbd;
+}
+.field *:-ms-input-placeholder { /* IE 10+ */
+  color: #bdbdbd;
+}
+.field *:-moz-placeholder { /* Firefox 18- */
+  color: #bdbdbd;
 }
 
 .product_detail {
@@ -756,5 +770,44 @@ a { text-decoration: none; }
 .user_container span.mr_left_16 {
 	width: calc(100% - 72px);
 	word-wrap: break-word;
+}
+
+.login_container {
+	margin-top: -160px;
+	position: relative;
+	margin-bottom: 32px;
+	z-index: 2;
+}
+
+.login_bg {
+	width: 100%;
+	height: 240px;
+	position: relative;
+}
+
+.login_bg .img_container {
+	width: 100%;
+	height: 100%;
+}
+
+.login_bg .bg_opacity {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.icon_field img {
+	vertical-align: bottom;
+	margin: 0 18px 6px 6px;
+	display: inline-block;
+}
+
+.icon_field .field_container {
+	width: calc(100% - 48px);
+	display: inline-block;
+	vertical-align: bottom;
 }
 

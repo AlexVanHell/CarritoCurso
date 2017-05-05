@@ -97,4 +97,16 @@
 		display: block;
 	}
 
+	.login_bg {
+		height: 360px;
+	}
+
+	.login_container {
+		margin-top: -220px;
+	}
+
+	.login_container .pd_24 {
+		padding: 32px;
+	}
+
 }
