@@ -26,4 +26,13 @@
 		max-width: 480px;
 	}
 
+	.page {
+		margin: 16px auto;
+		max-width: 1024px;
+	}
+
+	.product_detail {
+		padding: 0;
+	}
+
 }

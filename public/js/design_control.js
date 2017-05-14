@@ -113,7 +113,7 @@ function showCart( status ) {
 		});
 	} else {
 		selector.animate({
-			'right': -selector.width(),
+			'right': -selector.outerWidth() - 20,
 		});
 	}
 }

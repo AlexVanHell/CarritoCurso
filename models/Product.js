@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var Product = mongoose.Schema( {
+var Product = mongoose.Schema({
 
 	nombre: { type:String, required: [true, 'El nombre del producto es requerido'] },
 	descripcion: { type:String, required: [true, 'La descripcion del producto es requerida'] },

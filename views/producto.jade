@@ -1,9 +1,9 @@
 extends layout
 
 block content
-	article
+	article.page
 		section.product_detail
-			section.left.mr_0
+			section.left
 				.img_container.super_img
 					img(src='https://s-media-cache-ak0.pinimg.com/originals/cf/a2/58/cfa258fc88436cb491a0a9ebe00334e6.jpg')
 				.pd_24
@@ -31,7 +31,7 @@ block content
 										| Descripcion:
 									p.title_small.pd_8
 										| Lorem ipsum dolor si amet consequetur
-							.price_container
+							.price_container.text_align_right
 								.prices
 									.discount
 										.opacity.title_smaller.mr_bottom_8
@@ -45,7 +45,7 @@ block content
 			h2.font_primary.title_medium.pd_24.resp_title
 				| Valoraciones y comentarios
 			.val_list.responsive_col.text_align_center
-				.col_3.text_align_left
+				.col_2.text_align_left
 					.pd_8.mr_bottom_8
 						.bg_white.shadow_flat
 							.pd_24

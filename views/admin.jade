@@ -1,0 +1,48 @@
+extends layout
+
+block content
+	style(type='text/css')
+		| .toolbar .toolbar_in .right_info { display: none }
+	article.page
+		h1.title_bigger.pd_24.font_primary.font_normal
+			| Administrar productos
+		section.product_h_list
+			section.history_section
+				.pd_8.product
+					.text_align_right.font_primary
+						span.font_small.mr_right_8 Editar
+						button.pd_8.circle.hover_black
+							img.opacity.icon(src='/icons/edit_black.png')
+					.bg_white.shadow_flat
+						.pr_img
+							a(href='/producto/1')
+								.img_container
+									img(src='https://s-media-cache-ak0.pinimg.com/originals/cf/a2/58/cfa258fc88436cb491a0a9ebe00334e6.jpg')
+						.product_info
+							.pd_24
+								.info.mr_bottom_16
+									h2.title_small
+										| Nombre Producto
+									.mr_top_16
+										h3.font_big.font_gray
+											| Descripcion:
+										p.font_big.pd_8
+											| Lorem ipsum dolor si amet consequetur
+								.mr_bottom_16.sub_info
+									h3.font_big.mr_bottom_4.font_gray
+										| Stock:
+										span.title_smaller.mr_left_4
+											| 2
+								.price_container
+									.prices.text_align_right
+										.discount
+											.opacity.font_big.mr_bottom_4
+												| Descuento 15%
+											h2.opacity
+												strike.title_smaller
+													| $499.84
+										h2.title_medium.total.mr_top_16
+											| $424.86
+								p.text_align_right.mr_top_8
+									a.font_gray.font_bold(href='/producto/1', target='_blank') Ver mas
+

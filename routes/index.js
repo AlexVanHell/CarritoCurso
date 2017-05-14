@@ -6,6 +6,11 @@ router.get('/', function(req, res, next) {
 	res.render('index', { title: 'ShopIt' });
 });
 
+router.route('/admin/')
+	.get(function(req, res, next) {
+		res.render('admin', { title: 'ShopIt' });
+	});
+
 router.route('/login')
 	.get(function(req, res, next) {
 		res.render('login', { title: 'ShopIt Iniciar Sesión' });
@@ -16,9 +21,10 @@ router.route('/registro')
 		res.render('registro', { title: 'ShopIt Registro' });
 	});
 
-router.get('/cuenta', function(req, res, next) {
-	res.render('cuenta', { title: 'ShopIt Cuenta' });
-});
+router.route('/cuenta')
+	.get(function(req, res, next) {
+		res.render('cuenta', { title: 'ShopIt Cuenta' });
+	});
 
 router.get('/historial', function(req, res, next) {
 	res.render('historial', { title: 'ShopIt Historial de Compras' });
