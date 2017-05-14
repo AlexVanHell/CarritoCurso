@@ -1,6 +1,7 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+	.responsive_padding
+		h1= message
+		h2= error.status
+		pre #{error.stack}

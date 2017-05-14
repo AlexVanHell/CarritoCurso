@@ -3,12 +3,12 @@
 	.responsive_padding{padding: 48px 24px 48px 24px;}
 
 	.toolbar .toolbar_in .logo_container {
-		width: 120px;
+		width: 140px;
 		display: inline-block;
 	}
 
 	.toolbar .toolbar_in .right_info {
-		width: calc(100% - 120px);
+		width: calc(100% - 140px);
 	}
 
 	.main_container .sub_container .main_block .info_container .center_info {

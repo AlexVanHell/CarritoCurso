@@ -1,5 +1,108 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	article.main_container.bg_black
+		.carousel_indicator
+			#main-carousel-indicator.inner
+				i.point.circle.indicator
+				span.point.circle
+				span.point.circle
+				span.point.circle
+				span.point.circle
+		section#main-carousel.sub_container
+			.main_block.carousel_element
+				.img_container
+					img(src='https://www.xhostel.com/wp-content/uploads/2017/03/best-shopping-in-Bucharest.jpg', adjustable='')
+				.info_container
+					.center_info.font_white
+						h1.title_big
+							| Ahorra por tiempo limitado
+						h3.font_big.mr_top_24
+							| Aprovecha los descuentos de hasta el 30% en varios de nuestros productos
+						div
+							a(href='/producto/1')
+								button.pd_16.border_white.font_white.mr_top_32.border_radius
+									h4.font_big.font_light Ver productos
+			.main_block.carousel_element
+				.img_container
+					img(src='http://usedclothescollection.uk/wp-content/uploads/2015/04/second-slide.jpg', adjustable='')
+				.info_container.text_align_right
+					.center_info.font_white
+						h1.title_big
+							| Nuevos productos para toda la familia
+						h3.font_big.mr_top_24
+							| Ropa, calzado, articulos para el hogar
+						div
+							a(href='/producto/1')
+								button.pd_16.border_white.font_white.mr_top_32.border_radius
+									h4.font_big.font_light Ver productos
+			.main_block.carousel_element
+				.img_container
+					img(src='http://s2.dmcdn.net/hPesb.jpg', adjustable='')
+				.info_container
+					.center_info.font_white
+						h1.title_big
+							| ¡Nintendo Switch esta aqui!
+						h3.font_big.mr_top_24
+							| ¿Qué esperas para tener el tuyo?
+						div
+							a(href='producto.html')
+								button.pd_16.border_white.font_white.mr_top_32.border_radius
+									h4.font_big.font_light Comprar ahora
+			.main_block.carousel_element
+				.img_container
+					img(src='http://www.skullcandy.com/on/demandware.static/-/Library-Sites-SKDYCONTENT_TMPLT/default/dwb56dbc1c/product_assets/CRUSHER/Crusher-BassAdjustments-detail-view-1152x657.jpg', adjustable='')
+				.info_container.text_align_right
+					.center_info.font_white
+						h1.title_big
+							| Skullcandy Crusher
+						h3.font_big.mr_top_24
+							| Siente el poder de los bajos en tus oidos
+						div
+							a(href='/producto/1')
+								button.pd_16.border_white.font_white.mr_top_32.border_radius
+									h4.font_big.font_light Comprar ahora
+	article
+		.responsive_padding
+			h1.title_bigger.mr_bottom_48.font_primary.font_normal
+				| Algunos productos que te pueden interesar
+			section.responsive_col.text_align_center
+				.col_3.text_align_left
+					.pd_8.product
+						.bg_white.shadow_flat
+							.pr_img
+								a(href='producto.html')
+									.img_container
+										img(src='https://s-media-cache-ak0.pinimg.com/originals/cf/a2/58/cfa258fc88436cb491a0a9ebe00334e6.jpg')
+							.product_info
+								.pd_24
+									.info.mr_bottom_32
+										h2.title_small
+											| Nombre Producto
+										.mr_top_16
+											h3.font_big.font_gray
+												| Descripcion:
+											p.font_big.pd_8
+												| Lorem ipsum dolor si amet consequetur
+									.add_cart_container.text_align_center.mr_bottom_16
+										h4.font_gray.mr_bottom_8
+											| Añadir al carrito
+										button.circle.hover_black(title='Quitar')
+											img.icon.opacity(src='icons/minus_black.png')
+										span.pd_8.title_smaller.v_align_middle
+											| 0
+										button.circle.hover_black(title='Agregar')
+											img.icon.opacity(src='icons/plus_black.png')
+									.price_container.text_align_right
+										.prices
+											.discount
+												.opacity.font_big.mr_bottom_4
+													| Descuento 15%
+												h2.opacity.title_smaller
+													strike
+														| $499.84
+											h2.title_medium.mr_top_16.total
+												| $424.86
+									p.text_align_left.mr_top_8
+										a.font_gray.font_bold(href='producto.html', target='_blank') Ver mas
+

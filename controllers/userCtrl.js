@@ -1,5 +1,5 @@
 var mongoose = require('mongoose'),
-	userModel = mongoose.model('User');
+	userModel = require('../models/User');
 
 exports.getUsers = function(req, res) {
 	userModel.find({ mail: req.body.mail, psw: req.body.psw }, function(err, doc) {
@@ -9,7 +9,7 @@ exports.getUsers = function(req, res) {
 	});
 };
 
-exports.setUsers = function(req, res) {
+exports.setUser = function(req, res) {
 	var guardauserModel = new userModel({
 	});
 

@@ -1,5 +1,9 @@
 @media screen and (min-width: 768px) {
 
+	.resp_title {
+		padding-left: 0;
+	}
+
 	.responsive_padding{padding: 48px 32px 48px 32px;}
 
 	.responsive_col .col_2, .responsive_col .col_3 {
@@ -21,32 +25,8 @@
 		padding-right: 64px;
 	}
 
-	.toolbar .toolbar_in .right_info .pd_right_16 {
-		padding-right: 24px;
-	}
-
-	.toolbar .toolbar_in .right_info .search_bar_container {
-		width: auto;
-	}
-
-	#search-icon{
-		display: none;
-	}
-
-	.toolbar .toolbar_in .right_info .search_bar_container .search_bar {
-		position: relative;
-		display: inline-block;
-		width: 360px;
-		margin-right: 8px;
-	}
-
-	.toolbar .toolbar_in .right_info .search_bar_container .search_bar .text_field input {
-		padding-right: 8px;
-		width: calc(100% - 56px);
-	}
-
-	.toolbar .toolbar_in .right_info .search_bar_container .search_bar .text_field button.close {
-		display: none;
+	.toolbar .toolbar_in .right_info .info_icons {
+		padding-right: 12px;
 	}
 
 	.product_h_list .product .pr_img {
@@ -79,6 +59,8 @@
 		vertical-align: bottom;
 		word-wrap: break-word;
 	}
+
+	.valorations {padding-left: 32px;padding-right: 32px;}
 
 	.pop_up_container .pop_up .inner {
 		padding: 32px;

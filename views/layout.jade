@@ -3,87 +3,88 @@ html
 	head
 		title Shop it - Inicio
 		meta(charset='utf-8')
-		meta(name='viewport', ,='', content='width=device-width, maximum-scale=1.0 user-scalable=no')
-		link(rel='stylesheet', type='text/css', href='css/style.css')
-		link(rel='stylesheet', type='text/css', href='css/style_resp_425.css')
-		link(rel='stylesheet', type='text/css', href='css/style_resp_768.css')
-		link(rel='stylesheet', type='text/css', href='css/style_resp_1024.css')
-		link(rel='stylesheet', type='text/css', href='css/style_resp_1440.css')
-		link(rel='shortcut icon', type='image/png', href='icons/logo.png')
-		script(type='text/javascript', src='js/jquery-3.2.1.min.js')
-		script(type='text/javascript', src='js/design_control.js')
+		meta(name='viewport', content='width=device-width, maximum-scale=1.0 user-scalable=no')
+		link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
+		link(rel='stylesheet', type='text/css', href='/stylesheets/style_resp_425.css')
+		link(rel='stylesheet', type='text/css', href='/stylesheets/style_resp_768.css')
+		link(rel='stylesheet', type='text/css', href='/stylesheets/style_resp_1024.css')
+		link(rel='stylesheet', type='text/css', href='/stylesheets/style_resp_1440.css')
+		script(type='text/javascript', src='/js/jquery-3.2.1.min.js')
+		script(type='text/javascript', src='/js/design_control.js')
 	body
 		section.toolbar.bg_primary.shadow_flat
 			button#menu_button.menu_button(onclick='showMenu( true );')
-				img.icon.v_align_middle(src='icons/menu.png')
+				img.icon.v_align_middle(src='/icons/menu.png')
 			.toolbar_in
 				.logo_container.font_white.v_align_top
-					img.icon.v_align_middle(src='icons/logo_white.png')
+					img.icon.v_align_middle(src='/icons/logo_white.png')
 					h1.title_smaller.v_align_middle Shop It
 				.right_info.font_white
 					.search_bar_container.v_align_top
-						img#search-icon.icon.v_align_middle(src='icons/magnify_white.png', onclick='showSearchBar( true );')
+						img#search-icon.icon.v_align_middle(src='/icons/magnify_white.png', onclick='showSearchBar( true );')
 						#search-bar.search_bar
 							.text_field.bg_white.border_radius.shadow_flat
 								input(type='text', name='', placeholder='Buscar un producto')
 								button(type='submit')
-									img.icon.opacity(src='icons/magnify_black.png')
+									img.icon.opacity(src='/icons/magnify_black.png')
 								button.close.hover_black(onclick='showSearchBar( false );')
-									img.icon.opacity(src='icons/close_black.png')
-					span.v_align_top.font_big.pd_right_16.info_icons
-						span.mr_right_4.hover_black(onclick='showCart( true );')
-							.pd_right_4.pd_left_4
-								img.icon.mr_right_8.v_align_middle(src='icons/cart_white.png')
-								b#cart-items.v_align_middle 1
-						span.mr_left_4
-							b#cart-price.title_smaller.v_align_middle.mr_right_4 $
-							b#cart-price.v_align_middle 424.86
+									img.icon.opacity(src='/icons/close_black.png')
+					span.v_align_top.font_big.info_icons
+						span.hover_black(onclick='showCart( true );')
+							.pd_right_12.pd_left_12
+								img.icon.mr_right_8.v_align_middle(src='/icons/cart_white.png')
+								b#cart-items.v_align_middle 0
+						span.hover_black
+							.pd_right_16.pd_left_16
+								b.title_smaller.v_align_middle.mr_right_8 $
+								b#cart-price.v_align_middle 0
 		.toolbar_back
 		article#menu.menu.shadow_flat.bg_white
 			.close.text_align_right
 				button.text_align_center.hover_black(onclick='showMenu( false );')
-					img.icon.opacity.v_align_middle(src='icons/close_black.png')
+					img.icon.opacity.v_align_middle(src='/icons/close_black.png')
 			section.profile_container
 				.pd_24.text_align_center
 					.img_container.circle.margin_auto
-						img(src='icons/default_profile.png')
+						img(src='/icons/default_profile.png')
 					.name.mr_top_24
-						a.font_gray(href='')
+						a.font_gray(href='/cuenta')
 							h3.title_smaller
 								| Austin Andrews
 			section.list
 				nav.menu_options
-					a(href='')
+					a(href='/')
 						li.pd_16.hover_black
-							img.icon.opacity(src='icons/home_black.png')
+							img.icon.opacity(src='/icons/home_black.png')
 							strong
 								| Inicio
-					a(href='')
+					a(href='/historial')
 						li.pd_16.hover_black
-							img.icon.opacity(src='icons/shopping_black.png')
+							img.icon.opacity(src='/icons/shopping_black.png')
 							strong
 								| Historial de compras
-					a(href='')
+					a(href='/carrito')
 						li.pd_16.hover_black
-							img.icon.opacity(src='icons/cart_black.png')
+							img.icon.opacity(src='/icons/cart_black.png')
 							strong
 								| Carrito
-					a(href='')
+					a(href='/cuenta')
 						li.pd_16.hover_black
-							img.icon.opacity(src='icons/account_black.png')
+							img.icon.opacity(src='/icons/account_black.png')
 							strong
 								| Cuenta
 			section.bottom_actions
 				.text_align_right
-					button.font_red.pd_16.font_big
-						| Cerrar sesión
+					a.font_red(href='/logout')
+						button.font_red.pd_16.font_big
+							| Cerrar sesión
 		article#cart-mini-list.cart_container.bg_lightgray.shadow_flat
 			.inner.pd_8
-				a.underline.font_gray(href='carrito.html')
+				a.underline.font_gray(href='/carrito')
 					h2.title_medium.font_gray.pd_8.cart_title.text_align_right
 						| Mi carrito (1)
 				button.close.hover_black(onclick='showCart( false );')
-					img.icon.opacity(src='icons/close_black.png')
+					img.icon.opacity(src='/icons/close_black.png')
 				.history_total_amount.text_align_right.mr_top_8
 					.pd_right_16.pd_left_16
 						span.mr_right_8
@@ -95,7 +96,7 @@ html
 					.pd_8.product
 						.bg_white.shadow_flat
 							.pr_img
-								a(href='producto.html')
+								a(href='/producto/1')
 									.img_container
 										img(src='https://s-media-cache-ak0.pinimg.com/originals/cf/a2/58/cfa258fc88436cb491a0a9ebe00334e6.jpg')
 							.product_info
@@ -112,11 +113,11 @@ html
 										h5.font_gray.mr_bottom_8
 											| Elementos agregados
 										button.circle.hover_black(title='Quitar')
-											img.icon.opacity(src='icons/minus_black.png')
+											img.icon.opacity(src='/icons/minus_black.png')
 										span.pd_8.font_big.v_align_middle
 											| 1
 										button.circle.hover_black(title='Agregar')
-											img.icon.opacity(src='icons/plus_black.png')
+											img.icon.opacity(src='/icons/plus_black.png')
 									.price_container.text_align_right
 										.prices
 											.discount
@@ -127,10 +128,11 @@ html
 														| $499.84
 											h2.title_smaller.mr_top_16.total
 												| $424.86
+									p.text_align_right.mr_top_8
+										a.font_gray.font_bold(href='/producto/1', target='_blank') Ver mas
 									.delete_container.text_align_right.pd_top_16
 										button.font_red.font_big
 											| Eliminar del carrito
-									p.text_align_left.mr_top_8
-										a.font_gray.font_bold(href='producto.html', target='_blank') Ver mas
+									
 
 		block content
