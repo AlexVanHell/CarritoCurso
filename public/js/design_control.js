@@ -1,10 +1,17 @@
 $(document).ready( function() {
 	$('html, body').click( function() {
 		showMenu( false );
+		showCart( false );
 	}); 
 
 	$('#menu_button, #menu').click( function( event ) {
 		event.stopPropagation();
+		showCart( false );
+	});
+
+	$('#cart-button, #cart-mini-list').click( function( event ) {
+		event.stopPropagation();
+		showMenu( false );
 	});
 
 	$('#add-phone-button, #change-profile-photo').click( function( event ) {
@@ -12,7 +19,6 @@ $(document).ready( function() {
 	});
 
 	var readyStateCheckInterval = setInterval( function() {
-		resizeImg();
 	    if (document.readyState === "complete") {
 	        clearInterval( readyStateCheckInterval );
 	        resizeImg();
@@ -31,27 +37,27 @@ $(document).ready( function() {
 		});
 
 		var initMainCarousel = setInterval( function() {
-			moveCarousel( true, '#main-carousel', '#main-carousel-indicator' );
-		}, 5000);
+			moveCarousel( '#main-carousel', '#main-carousel-indicator' );
+		}, 6000);
 
 		$('#main-carousel-indicator').find('span').click( function () {
 			clearInterval( initMainCarousel );
-			moveCarousel( false, '#main-carousel', '#main-carousel-indicator', $('#main-carousel-indicator span').index( $(this) ) );
+			var index = $('#main-carousel-indicator span').index( $(this) );
+			moveCarousel( '#main-carousel', '#main-carousel-indicator', index );
 		});
 	}
 
 });
 
 // Funcion para mover el carousel de imagenes
-function moveCarousel( status, carousel_id, indicator_selector, position ) {
+function moveCarousel( carousel_id, indicator_selector, position ) {
 	var selector = $(carousel_id);
 	var items = selector.find('.carousel_element');
 	var indicator = $(indicator_selector);
 
 	var positioner = parseInt( items.eq(1).attr('data-idposition') );
 
-	if ( status ) {
-
+	if ( typeof position == typeof undefined ) {
 		selector.animate({
 			'left': '-100%',
 		}, 1200, function() {
