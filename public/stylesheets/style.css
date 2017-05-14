@@ -203,6 +203,13 @@ a { text-decoration: none; }
     transform: translate(-50%, -50%);
 }
 
+img.popup_product_img {
+	width: auto;
+	height: auto;
+	max-width: 400px;
+	max-height: 200px;
+}
+
 /*---- COLORS --------------------------- */
 
 .bg_primary { background-color: #3F51B5 !important; }
@@ -568,6 +575,10 @@ a { text-decoration: none; }
 	transform: translateY(-50%);
 }
 
+.product {
+	padding-bottom: 12px;
+}
+
 .product .pr_img {
 	background-color: #000;
 }
@@ -690,7 +701,8 @@ a { text-decoration: none; }
 	padding: 0 24px 16px 24px;
 }
 
-.field input, .field select {
+.field input, .field select, .field textarea {
+	font-family: 'Roboto', 'Helvetica', sans-serif;
 	width: 100%;
 	padding-top: 8px;
 	padding-bottom: 6px;
@@ -703,12 +715,12 @@ a { text-decoration: none; }
 }
 
 .field textarea {
-	width: auto;
+	resize: none;
+	height: 140px;
 	display: inline-block;
-	padding: 12px;
 }
 
-.field input:focus, .field select:focus {
+.field input:focus, .field select:focus, .field textarea:focus {
 	border-color: #8BC34A;
 	border-width: 2px;
 	padding-bottom: 5px;

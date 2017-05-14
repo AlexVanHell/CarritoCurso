@@ -1,12 +1,12 @@
 extends layout
 
 block content
-	article
+	article.page
 		#edit-profile-popup.pop_up_container
 			.pop_up_back(onclick="showPopup( false, '#edit-profile-popup' );")
 			.pop_up.big
 				.inner
-					.edit_profile.bg_white.shadow_raised
+					.bg_white.shadow_raised
 						.bg_primary.font_white
 							.text_align_right.pd_8
 								button.pd_8.circle.hover_black(onclick="showPopup( false, '#edit-profile-popup' );")
@@ -36,7 +36,7 @@ block content
 											.field_container.mr_top_12
 												label.opacity.font_bold.font_small Apellidos
 												.field
-													input(type='text', name='nombre', placeholder='Apellidos')
+													input(type='text', name='apellidos', placeholder='Apellidos')
 							.col_2.v_align_top
 								.pd_8
 									.data_container
@@ -46,23 +46,23 @@ block content
 											.field_container
 												label.opacity.font_bold.font_small Calle
 												.field
-													input(type='text', name='nombre', placeholder='Calle')
+													input(type='text', name='calle', placeholder='Calle')
 											.field_container.mr_top_12
 												label.opacity.font_bold.font_small Colonia
 												.field
-													input(type='text', name='nombre', placeholder='Colonia')
+													input(type='text', name='colonia', placeholder='Colonia')
 											.field_container.mr_top_12
 												label.opacity.font_bold.font_small Ciudad
 												.field
-													input(type='text', name='nombre', placeholder='Ciudad')
+													input(type='text', name='ciudad', placeholder='Ciudad')
 											.field_container.mr_top_12
 												label.opacity.font_bold.font_small Estado
 												.field
-													input(type='text', name='nombre', placeholder='Estado')
+													input(type='text', name='estado', placeholder='Estado')
 											.field_container.mr_top_12
 												label.opacity.font_bold.font_small País
 												.field
-													input(type='text', name='nombre', placeholder='País')
+													input(type='text', name='pais', placeholder='País')
 									.data_container.mr_top_32
 										h2.title_smaller.mr_bottom_24.font_primary
 											| Teléfonos
@@ -70,7 +70,7 @@ block content
 											.field_container.mr_top_12
 												label.opacity.font_bold.font_small Telefono
 												.field
-													input(type='text', name='nombre', placeholder='Telefono')
+													input(type='text', name='telefono', placeholder='Teléfono')
 										.mr_top_12.pd_left_16.pd_right_16
 											button#add-phonebutton.circle.hover_black.pd_8(title='Agregar teléfono')
 												img.icon.opacity(src='/icons/phone-plus_black.png')
@@ -78,15 +78,16 @@ block content
 								.field.text_align_right
 									input.bg_secondary.shadow_raised.font_white.border_radius(type='submit', name='', value='Guardar Cambios')
 		.account_container
-			h1.title_bigger.font_primary.pd_24.font_normal.resp_title
+			h1.title_bigger.pd_24.font_primary.font_normal.resp_title
 				| Cuenta
-			div.account_subcontainer
+			.account_subcontainer
 				section.left
 					.profile_container.mr_bottom_16.bg_white.shadow_flat
-						.pd_24
-							.edit_button_container
+						.pd_8
+							.text_align_right
 								button.edit.pd_8.circle.hover_black(title='Editar', onclick="showPopup( true, '#edit-profile-popup' );")
 									img.icon.opacity(src='/icons/edit_black.png')
+						.pd_24.pd_top_0
 							.text_align_center
 								.img_container.circle.margin_auto.big
 									img(src='/icons/default_profile.png')
@@ -108,14 +109,14 @@ block content
 										img.icon.v_align_middle(src='/icons/map-marker_black.png')
 										span.mr_left_8.v_align_middle
 											| Dirección
-									p.font_big.pd_left_16.pd_right_16.mr_top_8
+									p.font_big.pd_16
 										| Ignacio Allende 21, Amp Torre Blanca, 11289 Ciudad de México, CDMX
 								section.pd_top_16
 									h3.opacity
 										img.icon.v_align_middle(src='/icons/phone_black.png')
 										span.mr_left_8.v_align_middle
 											| Teléfonos
-									p.font_big.pd_left_16.pd_right_16.mr_top_8
+									p.font_big.pd_16
 										| 5546998574
 							.field_container.text_align_right.mr_top_32
 								.field
@@ -123,7 +124,7 @@ block content
 										| Eliminar mi cuenta
 				section.right
 					.cards_container
-						h1.title_small.font_primary.pd_16.mr_bottom_8.resp_title
+						h1.title_small.font_primary.pd_16.mr_bottom_8
 							| Tarjetas
 						.card_list
 							.bg_white.shadow_flat

@@ -28,11 +28,16 @@
 
 	.page {
 		margin: 16px auto;
-		max-width: 1024px;
+		max-width: 1080px;
 	}
 
-	.product_detail {
-		padding: 0;
+	.account_container {
+		margin: 0 auto;
+		max-width: 620px;
+	}
+
+	.account_subcontainer {
+		margin-top: 16px;
 	}
 
 }

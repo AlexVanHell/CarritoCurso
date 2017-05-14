@@ -64,7 +64,7 @@
 		display: none;
 	}
 
-	.page { margin: 24px auto; }
+	.page { margin: 24px auto;padding-left: 24px;padding-right: 24px; }
 
 	.product_h_list .product .pr_img {
 		width: 360px;
@@ -82,12 +82,7 @@
 		height: calc(100% - 64px);
 	}
 
-	.account_container
-		width: 90%;
-		max-width: 1080px;
-	}
-
-	.product_detail {
+	.product_detail, .account_container {
 		max-width: none;
 		width: auto;
 		padding-left: 24px;
