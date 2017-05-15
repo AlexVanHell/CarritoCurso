@@ -46,6 +46,11 @@ $(document).ready( function() {
 		});
 	}
 
+	$('#upload-prodimg').click( function( event ) {
+		event.preventDefault();
+		triggerClick('#product-photo-file');
+	});
+
 });
 
 // Funcion para mover el carousel de imagenes
