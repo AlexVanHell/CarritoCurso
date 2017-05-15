@@ -1,7 +1,7 @@
 doctype html
 html
 	head
-		title Shop it - Inicio
+		title= title
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width, maximum-scale=1.0 user-scalable=no')
 		link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
@@ -31,13 +31,9 @@ html
 									img.icon.opacity(src='/icons/close_black.png')
 					span.v_align_top.font_big.info_icons
 						span#cart-button.hover_black(onclick='showCart( true );')
-							.pd_right_12.pd_left_12
+							.pd_right_16.pd_left_16
 								img.icon.mr_right_8.v_align_middle(src='/icons/cart_white.png')
 								b#cart-items.v_align_middle 0
-						span.hover_black
-							.pd_right_16.pd_left_16
-								b.title_smaller.v_align_middle.mr_right_8 $
-								b#cart-price.v_align_middle 0
 		.toolbar_back
 		article#menu.menu.shadow_flat.bg_white
 			.close.text_align_right
@@ -45,8 +41,9 @@ html
 					img.icon.opacity.v_align_middle(src='/icons/close_black.png')
 			section.profile_container
 				.pd_24.text_align_center
-					.img_container.circle.margin_auto
-						img(src='/icons/default_profile.png')
+					a.font_gray(href='/cuenta')
+						.img_container.circle.margin_auto
+							img(src='/icons/default_profile.png')
 					.name.mr_top_24
 						a.font_gray(href='/cuenta')
 							h3.title_smaller

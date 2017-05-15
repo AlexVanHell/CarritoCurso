@@ -14,8 +14,8 @@ block content
 								button.pd_8.circle.hover_black(onclick="showPopup( false, '#edit-product-popup' );")
 									img.icon(src='/icons/close_white.png')
 							.pop_up_title
-								h1.title_medium.font_normal
-									| Editar producto
+								h1.title_big
+									| Editar Producto
 						form.pd_16.padding_block.responsive_col
 							.col_2.v_align_top.mr_bottom_32
 								.pd_8
@@ -100,16 +100,19 @@ block content
 											| Stock:
 											span.title_smaller.mr_left_4
 												| 2
+									.mr_bottom_16.sub_info
+										h3.font_big.mr_bottom_4.font_gray
+											| Descuento:
+											span.title_smaller.mr_left_4
+												| 15%
 									.price_container
 										.prices.text_align_right
-											.discount
-												.opacity.font_big.mr_bottom_4
-													| Descuento 15%
-												h2.opacity
-													strike.title_smaller
-														| $499.84
+											h2.title_small.total.mr_top_16
+												span.opacity.title_smaller Precio: 
+												span.mr_left_8 $499.84
 											h2.title_medium.total.mr_top_16
-												| $424.86
-									p.text_align_right.mr_top_8
+												span.opacity.title_smaller Precio Final: 
+												span.mr_left_8 $424.86
+									p.text_align_right.mr_top_16
 										a.font_gray.font_bold(href='/producto/1', target='_blank') Ver mas
 

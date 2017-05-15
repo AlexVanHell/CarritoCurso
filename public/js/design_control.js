@@ -25,7 +25,6 @@ $(document).ready( function() {
 	    }
 	}, 500);
 
-
 	if ( $('#main-carousel').length > 0 ) {
 		// Carousel de imagenes
 		$('#main-carousel-indicator').find('span').remove();

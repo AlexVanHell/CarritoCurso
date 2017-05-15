@@ -697,7 +697,7 @@ img.popup_product_img {
 	max-width: 620px;
 }
 
-.pop_up_container .pop_up .inner .pop_up_title {
+.pop_up_container .pop_up .inner .pop_up_title, .pop_up_title {
 	padding: 0 24px 16px 24px;
 }
 

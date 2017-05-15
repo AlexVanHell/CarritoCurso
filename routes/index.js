@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
 	res.render('index', { title: 'ShopIt' });
 });
 
-router.route('/admin/')
+router.route('/admin')
 	.get(function(req, res, next) {
 		res.render('admin', { title: 'ShopIt' });
 	});
@@ -35,7 +35,7 @@ router.get('/carrito', function(req, res, next) {
 });
 
 router.get('/producto/:idProducto', function(req, res, next) {
-	res.render('producto', { title: 'ShopIt' + req.params.idProducto });
+	res.render('producto', { title: 'ShopIt Producto: ' + req.params.idProducto });
 });
 
 module.exports = router;
