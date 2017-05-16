@@ -1,9 +1,84 @@
 extends layout
 
 block content
+	.main_action_button
+		button.pd_24.bg_secondary.shadow_raised.circle(onclick="showPopup( true, '#add-product-popup')")
+			img.icon(src='/icons/plus_white.png')
 	style(type='text/css')
 		| .toolbar .toolbar_in .right_info { display: none }
 	article.page
+		#add-product-popup.pop_up_container
+			.pop_up_back(onclick="showPopup( false, '#add-product-popup' );")
+			.pop_up.big
+				.inner
+					.bg_white.shadow_raised
+						.bg_primary.font_white
+							.text_align_right.pd_8
+								button.pd_8.circle.hover_black(onclick="showPopup( false, '#add-product-popup' );")
+									img.icon(src='/icons/close_white.png')
+							.pop_up_title
+								h1.title_big
+									| Agregar Producto
+						form.pd_16.padding_block.responsive_col
+							.col_2.v_align_top.mr_bottom_24
+								.pd_8
+									.photo_container.profile_container
+										h2.title_smaller.mr_bottom_24.font_primary
+											| Imagen
+										.text_align_center.mr_bottom_16
+											img#product-photo-add.popup_product_img.opacity(src='/icons/block-big_black.png')
+										.pd_left_16.pd_right_16
+											.field_container
+												.field.text_align_center
+													button#upload-prodimg-add.pd_12.bg_secondary.shadow_raised.border_radius
+														img.icon.v_align_middle(src='/icons/camera_white.png') 
+														span.mr_left_8.v_align_middle Subir imagen 
+													input#product-photo-file-add(type="file" style="display: none;", onchange="previewPhoto( this, '#product-photo-add' );")
+											.field_container.mr_top_16
+												label.opacity.font_bold.font_small Url Imagen
+												.field
+													input(type='text', name='', placeholder='url')
+									.data_container.mr_top_32
+										h2.title_smaller.mr_bottom_24.font_primary
+											| Nombre
+										.pd_left_16.pd_right_16
+											.field_container
+												label.opacity.font_bold.font_small Nombre
+												.field
+													input(type='text', name='nombre', placeholder='Nombre(s)')
+							.col_2.v_align_top
+								.pd_8
+									.data_container
+										h2.title_smaller.mr_bottom_24.font_primary
+											| Descripción
+										.pd_left_16.pd_right_16
+											.field_container
+												label.opacity.font_bold.font_small Descripción
+												.field
+													textarea(name='descripcion', placeholder='Escribe aqui')
+									.data_container.mr_top_32
+										h2.title_smaller.mr_bottom_24.font_primary
+											| Cantidad en tienda
+										.pd_left_16.pd_right_16
+											.field_container
+												label.opacity.font_bold.font_small Cantidad
+												.field
+													input(type='text', name='cantidad', placeholder='Cantidad')
+									.data_container.mr_top_32
+										h2.title_smaller.mr_bottom_24.font_primary
+											| Precio
+										.pd_left_16.pd_right_16
+											.field_container.mr_top_12
+												label.opacity.font_bold.font_small Precio
+												.field
+													input(type='text', name='precio', placeholder='Precio')
+											.field_container.mr_top_12
+												label.opacity.font_bold.font_small Descuento
+												.field
+													input(type='text', name='descuento', placeholder='Descuento(%)')
+							.field_container.mr_top_32
+								.field.text_align_right
+									input.bg_secondary.shadow_raised.font_white.border_radius(type='submit', name='', value='Guardar Cambios')
 		#edit-product-popup.pop_up_container
 			.pop_up_back(onclick="showPopup( false, '#edit-product-popup' );")
 			.pop_up.big
@@ -17,7 +92,7 @@ block content
 								h1.title_big
 									| Editar Producto
 						form.pd_16.padding_block.responsive_col
-							.col_2.v_align_top.mr_bottom_32
+							.col_2.v_align_top.mr_bottom_24
 								.pd_8
 									.photo_container.profile_container
 										h2.title_smaller.mr_bottom_24.font_primary
@@ -31,7 +106,7 @@ block content
 														img.icon.v_align_middle(src='/icons/camera_white.png') 
 														span.mr_left_8.v_align_middle Subir imagen 
 													input#product-photo-file(type="file" style="display: none;", onchange="previewPhoto( this, '#product-newphoto' );")
-											.field_container.mr_top_8
+											.field_container.mr_top_16
 												label.opacity.font_bold.font_small Url Imagen
 												.field
 													input(type='text', name='', placeholder='url')

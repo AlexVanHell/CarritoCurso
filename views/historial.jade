@@ -4,13 +4,12 @@ block content
 	article.page
 		h1.title_bigger.pd_24.font_primary.font_normal
 			| Historial de compras
-		section.product_h_list.pd_16
+		section.pd_16
 			section.history_section
-				h4.opacity.font_small Id: 8349ASDJIASD99234
 				h2.title_smaller.pd_8.pd_top_16.pd_bottom_16.opacity
 					| Fecha de compra: 
 					span.mr_left_8 28/04/2017
-				section
+				section.product_h_list
 					.product
 						.bg_white.shadow_flat
 							.pr_img
@@ -44,7 +43,8 @@ block content
 												| $424.86
 									p.text_align_right.mr_top_16
 										a.font_gray.font_bold(href='/producto/1', target='_blank') Ver mas
-				.history_total_amount.text_align_right.pd_24
+				.history_total_amount.text_align_right
+					h4.opacity.font_small.mr_bottom_12 Id Compra: 8349ASDJIASD99234
 					h3.title_smaller.mr_bottom_12.opacity Total pagado
 					h2.title_medium.font_primary $849.73
 				.border_bottom
