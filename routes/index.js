@@ -68,6 +68,9 @@ router.post('/registrar', function(req, res, next) {
 			console.log("err.message")
 			res.status(500).send( err );
 		}else{
+			req.session.datos = { privilegio: 0, 
+								  nombre: req.query.nombre,
+								  mail: req.query.mail};
 			res.status(200).jsonp(alumno);
 		}
 	});

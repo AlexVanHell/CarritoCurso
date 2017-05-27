@@ -1,5 +1,5 @@
 doctype html
-html
+html( ng-app="aplicacion" )
 	head
 		title= title
 		meta(charset='utf-8')
@@ -11,7 +11,7 @@ html
 		link(rel='stylesheet', type='text/css', href='/stylesheets/style_resp_1440.css')
 		script(type='text/javascript', src='/js/jquery-3.2.1.min.js')
 		script(type='text/javascript', src='/js/design_control.js')
-	body
+	body( ng-controller="loginCtrl" )
 		.login_bg.bg_primary
 		section.login_container
 			.logo_container.text_align_center
@@ -23,20 +23,20 @@ html
 					.title_container.text_align_center
 						h2.title_big.pd_top_8.font_primary
 							| Iniciar Sesión
-					form
+					form( ng-submit="loguea()" )
 						.pd_top_48.pd_bottom_48
 							.icon_field
 								img.icon.opacity(src='/icons/account_black.png')
 								.field_container
-									label.opacity.font_bold.font_small Usuario
+									label.opacity.font_bold.font_small Mail
 									.field
-										input(type='text', name='usuario', placeholder='Usuario')
+										input(type='text', name='mail', placeholder='Mail', ng-model="mail")
 							.icon_field.mr_top_16
 								img.icon.opacity(src='/icons/lock_black.png')
 								.field_container
 									label.opacity.font_bold.font_small Contraseña
 									.field
-										input(type='password', name='contra', placeholder='Contraseña')
+										input(type='password', name='contra', placeholder='Contraseña', ng-model="pass")
 						.field_container
 							.field
 								input.bg_secondary.shadow_raised.w_100.font_white.border_radius(type='submit', name='contra', value='Iniciar')
