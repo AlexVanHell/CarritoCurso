@@ -44,26 +44,29 @@ router.get('/carrito', function(req, res, next) {
 });
 
 router.get('/producto/:idProducto', function(req, res, next) {
-	res.render('producto', { title: 'ShopIt Producto: ' + req.params.idProducto });
+	res.render('producto', { title: 'ShopIt Producto: ' + req.query.idProducto });
 });
 
 
 /*Funciones pa angular*/
 router.post('/registrar', function(req, res, next) {
 
+	console.log(req)
+
 	var guardaUser = new User({
 					privilegio: 0,
-					nombre: req.params.nombre,
-					apellido: req.params.apellido,
-					mail: req.params.mail,
-					telefono: req.params.telefono,
-					direccion: req.params.direccion,
-					psw: req.params.psw
+					nombre: req.query.nombre,
+					apellido: req.query.apellidos,
+					mail: req.query.mail,
+					telefono: req.query.telefono,
+					direccion: req.query.direccion,
+					psw: req.query.contra
 	});
 
 	guardaUser.save(function(err, alumno) {
 		if (err){
-			res.status(500).send( err.message );
+			console.log("err.message")
+			res.status(500).send( err );
 		}else{
 			res.status(200).jsonp(alumno);
 		}
@@ -72,7 +75,7 @@ router.post('/registrar', function(req, res, next) {
 
 router.get('/login', function(req, res, next) {
 
-	User.find({ mail: req.params.mail, psw: req.params.psw }, function(err, doc){
+	User.find({ mail: req.query.mail, psw: req.query.psw }, function(err, doc){
 		if(err){
 			res.status(500).send( err.message );
 		}else{
@@ -92,10 +95,10 @@ router.get('/getCookieCompra', function(req, res, next) {
 router.post('/pushCookieCompra', function(req, res, next) {
 
 	var compra = {
-		nombre: req.params.element.nombre,
-		descripcion: req.params.element.descripcion,
-		precio: req.params.element.precio,
-		cantidad: req.params.element.cantidad
+		nombre: req.query.element.nombre,
+		descripcion: req.query.element.descripcion,
+		precio: req.query.element.precio,
+		cantidad: req.query.element.cantidad
 	}
 
 	var galleta = req.cookies.compra;
@@ -116,7 +119,7 @@ router.post('/comprar', function(req, res, next) {
 	var guardaUser = new User();
 
 	guardaUser.compras.push({ 
-		cantidadTotal: req.params.cantidadTotal,
+		cantidadTotal: req.query.cantidadTotal,
 		producto: req.cookies.compra,
 		fecha: new Date()
 	});
