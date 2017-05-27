@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var User = require('../models/User');
 
 /* Renders */
 router.get('/', function(req, res, next) {
@@ -13,12 +14,20 @@ router.route('/admin')
 
 router.route('/login')
 	.get(function(req, res, next) {
-		res.render('login', { title: 'ShopIt Iniciar Sesión' });
+		if( !req.session.datos ){
+			res.render('login', { title: 'ShopIt Iniciar Sesión' });
+		}else{
+			res.redirect('/');
+		}
 	});
 
 router.route('/registro')
 	.get(function(req, res, next) {
-		res.render('registro', { title: 'ShopIt Registro' });
+		if( !req.session.datos ){
+			res.render('registro', { title: 'ShopIt Registro' });
+		}else{
+			res.redirect('/');
+		}
 	});
 
 router.route('/cuenta')
@@ -37,5 +46,90 @@ router.get('/carrito', function(req, res, next) {
 router.get('/producto/:idProducto', function(req, res, next) {
 	res.render('producto', { title: 'ShopIt Producto: ' + req.params.idProducto });
 });
+
+
+/*Funciones pa angular*/
+router.post('/registrar', function(req, res, next) {
+
+	var guardaUser = new User({
+					privilegio: 0,
+					nombre: req.params.nombre,
+					apellido: req.params.apellido,
+					mail: req.params.mail,
+					telefono: req.params.telefono,
+					direccion: req.params.direccion,
+					psw: req.params.psw
+	});
+
+	guardaUser.save(function(err, alumno) {
+		if (err){
+			res.status(500).send( err.message );
+		}else{
+			res.status(200).jsonp(alumno);
+		}
+	});
+});
+
+router.get('/login', function(req, res, next) {
+
+	User.find({ mail: req.params.mail, psw: req.params.psw }, function(err, doc){
+		if(err){
+			res.status(500).send( err.message );
+		}else{
+			req.session.datos = doc;
+			res.status(200).jsonp( doc );
+		}
+	});
+
+});
+
+router.get('/getCookieCompra', function(req, res, next) {
+
+	res.status(200).jsonp( req.cookies.compra );
+
+});
+
+router.post('/pushCookieCompra', function(req, res, next) {
+
+	var compra = {
+		nombre: req.params.element.nombre,
+		descripcion: req.params.element.descripcion,
+		precio: req.params.element.precio,
+		cantidad: req.params.element.cantidad
+	}
+
+	var galleta = req.cookies.compra;
+	
+	if ( galleta ) {
+		galleta.push(compra);
+		res.cookie("compra" , compra);
+	}else{
+		galleta = [];
+		galleta.push(compra);
+		res.cookie("compra" , compra);
+	}
+	
+});
+
+router.post('/comprar', function(req, res, next) {
+
+	var guardaUser = new User();
+
+	guardaUser.compras.push({ 
+		cantidadTotal: req.params.cantidadTotal,
+		producto: req.cookies.compra,
+		fecha: new Date()
+	});
+
+	guardaUser.save(function(err, alumno) {
+		if (err){
+			res.status(500).send( err.message );
+		}else{
+			res.cookie("compra" , []);
+			res.status(200).jsonp(alumno);
+		}
+	});
+});
+
 
 module.exports = router;
